@@ -1,0 +1,8 @@
+[kafka]
+192.168.64.41       kafka_broker_id=0      
+192.168.64.42       kafka_broker_id=1      
+
+[zookeeper-nodes]
+192.168.64.41
+192.168.64.42
+

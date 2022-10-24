@@ -1,0 +1,22 @@
+- name: Install Java
+  hosts: kafka
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Install Java
+      apt: name=openjdk-8-jdk update_cache=yes state=latest
+
+- name: Ansible Playbook to Install and Setup Apache on Ubuntu
+  hosts: kafka
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - sleighzy.zookeeper
+    - role: sleighzy.kafka
+      vars:
+        # FIXME - update the JVM heap for your setup
+        kafka_java_heap: "-Xms256m -Xmx256m"
+        kafka_listeners:
+          - "PLAINTEXT://0.0.0.0:9092"
+    
+  
