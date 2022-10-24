@@ -16,7 +16,8 @@
       vars:
         # FIXME - update the JVM heap for your setup
         kafka_java_heap: "-Xms256m -Xmx256m"
-        kafka_listeners:
-          - "PLAINTEXT://0.0.0.0:9092"
+        kafka_advertised_listeners: ["PLAINTEXT://{{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}:9092"]
+        kafka_listeners: 
+          - "PLAINTEXT://{{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}:9092"
     
   
