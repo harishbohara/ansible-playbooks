@@ -21,3 +21,24 @@ sudo ./zkServer.sh status
 
 >> This will print "follower" or "leader"
 ```
+
+### Setup VMs using multipass
+1. Setup VMs
+```shell
+multipass launch --name ans1
+multipass launch --name ans2
+multipass launch --name ans3
+```
+2. Make sure you add your SSH to work 
+```ssh
+cat ~/.ssh/id_rsa.pub  | multipass exec ans1 -- tee -a .ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub  | multipass exec ans2 -- tee -a .ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub  | multipass exec ans3 -- tee -a .ssh/authorized_keys
+```
+3. SSH once to each node
+```shell
+# Change your IPs
+ssh ubuntu@192.168.64.41
+ssh ubuntu@192.168.64.42
+ssh ubuntu@192.168.64.43
+```
