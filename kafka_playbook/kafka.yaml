@@ -14,10 +14,8 @@
     - role: sleighzy.zookeeper
       vars:
         zookeeper_servers_use_inventory_hostname: true
-        zookeeper_servers:
-        - "{{ansible_play_hosts_all[0]}}"
-        - "{{ansible_play_hosts_all[1]}}"        
-
+        zookeeper_servers: "{{ groups['zookeeper-nodes'] }}"
+        
 - name: Ansible Playbook to Install and Setup Apache on Ubuntu
   hosts: kafka
   remote_user: ubuntu
