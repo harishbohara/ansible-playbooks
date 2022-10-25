@@ -1,7 +1,6 @@
-### ZK
-Location of ZK bin = /usr/share/apache-zookeeper-3.7.1/bin/
+# How to setup
+1. Edit your hosts
+   1. Kafka nodes  (min 2 nodes)
+   2. Zookeeper nodes -> you can use the same nodes as Kafka (min 2 nodes)
 
-```shell
-# Check if this is a follower or a master
-sudo ./zkServer.sh status
-```
+2. For each "kafka" and "zookeeper-nodes" have a unique "kafka_broker_id" and "zookeeper_id" ids
