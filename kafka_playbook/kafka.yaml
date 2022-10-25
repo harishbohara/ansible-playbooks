@@ -28,5 +28,5 @@
         kafka_advertised_listeners: ["PLAINTEXT://{{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}:9092"]
         kafka_listeners: 
           - "PLAINTEXT://{{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}:9092"
-        kafka_zookeeper_connect: "{{ansible_play_hosts_all[0]}}:2181,{{ansible_play_hosts_all[1]}}:2181"
+        kafka_zookeeper_connect: "{{ groups['zookeeper-nodes'] | join(':2181,') }}:2181"
                 
