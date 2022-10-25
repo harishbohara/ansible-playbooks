@@ -1,6 +1,7 @@
 [kafka]
 192.168.64.41       kafka_broker_id=0   
 192.168.64.42       kafka_broker_id=1   
+192.168.64.43       kafka_broker_id=2   
 
 [zookeeper-nodes]
 192.168.64.41       zookeeper_id=1
