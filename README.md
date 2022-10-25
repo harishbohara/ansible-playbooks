@@ -7,7 +7,7 @@ ansible-playbook kafka.yaml -i hosts  -b
 ```
 
 ---
-### Miscellaneous
+# Miscellaneous
 
 ### Check the status and type of ZK on a spefific node
 You can check if ZK is running as leader or follower
@@ -21,6 +21,7 @@ sudo ./zkServer.sh status
 
 >> This will print "follower" or "leader"
 ```
+---
 
 ### Setup VMs using multipass
 1. Setup VMs
