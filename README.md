@@ -1,4 +1,7 @@
-This repo is created to have all ansible playbooks
+This repo is created to have all ansible playbooks.
+
+Note - not related to ansible. I have used this same repo to keep some linux kernel building things. Go to
+```ignore/linux``` for more details.
 
 ## Setup Kafka
 Setup can be fond in ```kafka_playbook``` dir
