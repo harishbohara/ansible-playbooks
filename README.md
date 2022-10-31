@@ -4,7 +4,8 @@ Note - not related to ansible. I have used this same repo to keep some linux ker
 ```ignore/linux``` for more details.
 
 ## Setup Kafka
-Setup can be fond in ```kafka_playbook``` dir
+Setup can be fond in ```kafka_playbook``` dir.
+
 ```shell
 ansible-playbook kafka.yaml -i hosts  -b
 ```
