@@ -1,9 +1,10 @@
 This repo is created to have all ansible playbooks.
 
-Note - not related to ansible. I have used this same repo to keep some linux kernel building things. Go to
-```ignore/linux``` for more details.
+```
+Note: not related to ansible. I have used this same repo to keep some linux kernel building things. Go to ```ignore/linux``` for more details.
+```
 
-## Setup Kafka
+# Setup Kafka
 Setup can be fond in ```kafka_playbook``` dir.
 
 ```shell
@@ -11,8 +12,9 @@ ansible-playbook kafka.yaml -i hosts  -b
 ```
 
 ---
-# Miscellaneous
+<br><br>
 
+# Miscellaneous
 ### Check the status and type of ZK on a spefific node
 You can check if ZK is running as leader or follower
 
